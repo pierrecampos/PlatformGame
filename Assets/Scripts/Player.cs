@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
     private bool isJumping;
     private bool doubleJump;
     private bool isAttacking;
+    private bool isDeath;
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -81,12 +82,20 @@ public class Player : MonoBehaviour {
         }
 
     }
-    void OnHit() {
-        health--;
-        anim.SetTrigger("hit");
+    float recoveryTime;
+    public void OnHit() {
 
-        if (health <= 0) {
+        recoveryTime += Time.deltaTime;
+
+        if (recoveryTime >= 0.7f) {
+            health--;
+            anim.SetTrigger("hit");
+            recoveryTime = 0;
+        }
+
+        if (health <= 0 && !isDeath) {
             anim.SetTrigger("death");
+            isDeath = true;
         }
     }
 
