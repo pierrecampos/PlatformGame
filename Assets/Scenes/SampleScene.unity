@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 688376984}
   - component: {fileID: 688376983}
   - component: {fileID: 688376988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemySlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021273315, y: -0.45950404}
+  m_Offset: {x: -0.024637014, y: -0.45950404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -466,7 +466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2127331, y: 0.5809919}
+  m_Size: {x: 1.0842228, y: 0.5809919}
   m_EdgeRadius: 0
 --- !u!95 &688376985
 Animator:
@@ -545,14 +545,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688376982}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.946, y: -4.025, z: 0}
   m_LocalScale: {x: 0.63793, y: 0.63793, z: 0.63793}
   m_Children:
   - {fileID: 2113861154}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &688376988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f50ef98c56f8294a9117eb5330f1eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: -1.5
+  health: 3
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -4421,7 +4422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371265425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.115, z: 0}
+  m_LocalPosition: {x: -1.705, y: -4.115, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 913452040}
@@ -4444,6 +4445,10 @@ MonoBehaviour:
   anim: {fileID: 913452041}
   point: {fileID: 182020386}
   radius: 0.15
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  health: 3
   speed: 5
   jumpForce: 10
 --- !u!58 &1371265428
@@ -4459,9 +4464,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03999999, y: -0.0072674155}
+  m_Offset: {x: -0.03, y: -0.0072674155}
   serializedVersion: 2
-  m_Radius: 0.36220676
+  m_Radius: 0.31280303
 --- !u!50 &1371265429
 Rigidbody2D:
   serializedVersion: 4

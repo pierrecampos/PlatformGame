@@ -8,7 +8,9 @@ public class Player : MonoBehaviour {
     public Animator anim;
     public Transform point;
     public float radius;
+    public LayerMask enemyLayer;
 
+    public int health;
     public float speed;
     public float jumpForce;
 
@@ -70,12 +72,22 @@ public class Player : MonoBehaviour {
             isAttacking = true;
             anim.SetInteger("transition", 3);
 
-            Collider2D hit = Physics2D.OverlapCircle(point.position, radius);
+            Collider2D hit = Physics2D.OverlapCircle(point.position, radius, enemyLayer);
 
-            if (hit) Debug.Log(hit.name);
+            if (hit) {
+                hit.GetComponent<EnemySlime>().OnHit();
+            }
             StartCoroutine(OnAttack());
         }
 
+    }
+    void OnHit() {
+        health--;
+        anim.SetTrigger("hit");
+
+        if (health <= 0) {
+            anim.SetTrigger("death");
+        }
     }
 
     IEnumerator OnAttack() {
@@ -92,4 +104,12 @@ public class Player : MonoBehaviour {
             isJumping = false;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.layer == 7) {
+            OnHit();
+        }
+    }
+
+
 }
