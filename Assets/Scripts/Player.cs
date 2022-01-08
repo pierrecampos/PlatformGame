@@ -124,6 +124,13 @@ public class Player : MonoBehaviour {
         if (col.gameObject.layer == 7) {
             OnHit();
         }
+
+        if (col.CompareTag("Coin")) {            
+            col.GetComponent<Animator>().SetTrigger("pickUp");
+            Destroy(col.gameObject, 0.417f);
+            GameController.instance.GetCoin();
+
+        }
     }
 
 
