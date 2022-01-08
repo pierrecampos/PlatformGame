@@ -18,11 +18,6 @@ public class EnemySlime : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
-
-    void Update() {
-
-    }
-
     void FixedUpdate() {
         rig.velocity = new Vector2(speed, rig.velocity.y);
         OnCollision();

@@ -43,13 +43,27 @@ public class EnemyGoblin : MonoBehaviour {
                 isFront = false;
                 anim.SetInteger("transition", 2);
                 rig.velocity = Vector2.zero;
-                hit.transform.GetComponent<Player>().OnHit();
+                AttackTime(hit.transform.GetComponent<Player>());
             }
+        } else if (hit.collider != null && hit.transform.gameObject.layer == 6) {
+            isFront = false;
+            anim.SetInteger("transition", 0);
+            rig.velocity = Vector2.zero;
         }
+
 
         RaycastHit2D behindHit = Physics2D.Raycast(behindPoint.position, -direction, maxVision);
         if (behindHit.collider != null && behindHit.transform.CompareTag("Player")) {
             isRight = !isRight;
+        }
+    }
+
+    float timerAttack;
+    void AttackTime(Player player) {
+        timerAttack += Time.deltaTime;
+        if (timerAttack >= 1f) {
+            player.OnHit();
+            timerAttack = 0;
         }
     }
 

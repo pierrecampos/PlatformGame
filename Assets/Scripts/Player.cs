@@ -88,16 +88,9 @@ public class Player : MonoBehaviour {
         }
 
     }
-    float recoveryTime;
     public void OnHit() {
-
-        recoveryTime += Time.deltaTime;
-
-        if (recoveryTime >= 0.7f) {
-            health--;
-            anim.SetTrigger("hit");
-            recoveryTime = 0;
-        }
+        health--;
+        anim.SetTrigger("hit");
 
         if (health <= 0 && !isDeath) {
             anim.SetTrigger("death");
@@ -121,11 +114,12 @@ public class Player : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
+
         if (col.gameObject.layer == 7) {
             OnHit();
         }
 
-        if (col.CompareTag("Coin")) {            
+        if (col.CompareTag("Coin")) {
             col.GetComponent<Animator>().SetTrigger("pickUp");
             Destroy(col.gameObject, 0.417f);
             GameController.instance.GetCoin();
