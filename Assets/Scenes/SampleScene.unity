@@ -469,6 +469,7 @@ MonoBehaviour:
   isFront: 0
   isRight: 1
   stopDistance: 0.6
+  health: 3
   speed: 2
   maxVision: 3
 --- !u!95 &451316131

@@ -15,8 +15,10 @@ public class EnemyGoblin : MonoBehaviour {
     public float stopDistance;
     private Vector2 direction;
 
+    public int health;
     public float speed;
     public float maxVision;
+    private bool isDeath;
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -32,14 +34,14 @@ public class EnemyGoblin : MonoBehaviour {
     void GetPlayer() {
         RaycastHit2D hit = Physics2D.Raycast(point.position, direction, maxVision);
 
-        if (hit.collider != null && hit.transform.CompareTag("Player")) {
+        if (hit.collider != null && hit.transform.CompareTag("Player") && !isDeath) {
             isFront = true;
-            
+
             float distance = Vector2.Distance(transform.position, hit.transform.position);
-            
+
             if (distance <= stopDistance) {
                 isFront = false;
-                anim.SetInteger("transition", 2);                
+                anim.SetInteger("transition", 2);
                 rig.velocity = Vector2.zero;
                 hit.transform.GetComponent<Player>().OnHit();
             }
@@ -63,9 +65,20 @@ public class EnemyGoblin : MonoBehaviour {
             direction = Vector2.left;
         }
 
-        if (isFront) {
+        if (isFront && !isDeath) {
             anim.SetInteger("transition", 1);
             rig.velocity = vel;
+        }
+    }
+
+    public void OnHit() {
+        health--;
+        anim.SetTrigger("hit");
+
+        if (health <= 0 && !isDeath) {
+            isDeath = true;
+            anim.SetTrigger("death");
+            Destroy(gameObject, 0.5f);
         }
     }
 
