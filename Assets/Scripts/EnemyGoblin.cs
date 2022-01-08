@@ -45,7 +45,7 @@ public class EnemyGoblin : MonoBehaviour {
                 rig.velocity = Vector2.zero;
                 AttackTime(hit.transform.GetComponent<Player>());
             }
-        } else if (hit.collider != null && hit.transform.gameObject.layer == 6) {
+        } else if (hit.collider != null) {
             isFront = false;
             anim.SetInteger("transition", 0);
             rig.velocity = Vector2.zero;
