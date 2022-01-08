@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 188211154}
   - component: {fileID: 188211156}
   - component: {fileID: 188211157}
+  - component: {fileID: 188211158}
   m_Layer: 0
   m_Name: buttom
   m_TagString: Untagged
@@ -328,11 +329,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.28513196, y: -0.08128172}
-      - {x: 0.23917489, y: -0.08260381}
-      - {x: 0.2453608, y: 0.013013672}
-      - {x: -0.080560066, y: 0.0039567873}
-      - {x: -0.19221424, y: -0.04046304}
+    - - {x: -0.3784709, y: -0.08391182}
+      - {x: 0.25, y: -0.0625}
+      - {x: 0.2532941, y: 0.0015586708}
+      - {x: -0.10999967, y: -0.000088390196}
 --- !u!95 &188211157
 Animator:
   serializedVersion: 3
@@ -352,6 +352,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &188211158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188211153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49077598bf2819645b029195a4ef5239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrierAnim: {fileID: 1837419577}
+  validMask:
+    serializedVersion: 2
+    m_Bits: 256
+  radius: 0.4
 --- !u!1 &315400275
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +381,7 @@ GameObject:
   - component: {fileID: 315400276}
   - component: {fileID: 315400279}
   - component: {fileID: 315400278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4597,7 +4614,7 @@ GameObject:
   - component: {fileID: 1371265427}
   - component: {fileID: 1371265429}
   - component: {fileID: 1371265428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4612,7 +4629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371265425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.95, y: -3.97, z: 0}
+  m_LocalPosition: {x: 6.46, y: 1.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 913452040}
