@@ -1311,15 +1311,15 @@ GameObject:
   m_Component:
   - component: {fileID: 547178814}
   - component: {fileID: 547178817}
-  - component: {fileID: 547178816}
   - component: {fileID: 547178815}
+  - component: {fileID: 547178816}
   m_Layer: 0
   m_Name: barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &547178814
 Transform:
   m_ObjectHideFlags: 0
@@ -1370,7 +1370,7 @@ Animator:
   m_GameObject: {fileID: 547178813}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37d6c0ca7bf372141b908c78a14fe9e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: d04611dcc17f726498ae5a24e8ba73e2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1750,8 +1750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8ec4cd01d886e45a3bcb2352590502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 3
-  health: 3
+  healthCount: 5
+  health: 5
   fullHeart: {fileID: 21300000, guid: f6168c4087634d4468a9a3bd31e07e88, type: 3}
   emptyHeart: {fileID: 21300000, guid: 9cc9cef9c1089164eae5e9142eaf0c7d, type: 3}
   hearts:
@@ -6261,6 +6261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGoblin
       objectReference: {fileID: 0}
+    - target: {fileID: 1069064268084840009, guid: c5fb225b46fbd474e8b7d20406ad9680, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1069064268084840053, guid: c5fb225b46fbd474e8b7d20406ad9680, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8470,11 +8474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.37
+      value: 6.84
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.03
+      value: -3.57
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.z
