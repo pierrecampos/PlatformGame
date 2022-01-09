@@ -10,10 +10,13 @@ public class GameController : MonoBehaviour {
 
     private int score;
     public Text scoreText;
+    public GameObject gameOverPanel;
 
 
     void Awake() {
         instance = this;
+
+        Time.timeScale = 1;
     }
 
     private void Start() {
@@ -37,5 +40,15 @@ public class GameController : MonoBehaviour {
         }
         score = PlayerPrefs.GetInt("score");
         scoreText.text = "x " + score.ToString();
+    }
+
+    public void ShowGameOver() {
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
+
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

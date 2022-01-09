@@ -8,7 +8,7 @@ public class Health : MonoBehaviour {
     [SerializeField]
     private int healthCount;
 
-    public Player player;
+    public int health;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
@@ -18,7 +18,7 @@ public class Health : MonoBehaviour {
     void Update() {
 
         for (int x = 0; x < hearts.Length; x++) {
-            hearts[x].sprite = x < player.health ? fullHeart : emptyHeart;
+            hearts[x].sprite = x < health ? fullHeart : emptyHeart;
         }
 
         for (int x = 0; x < hearts.Length; x++) {
