@@ -6,12 +6,21 @@ public class SpawnPlayer : MonoBehaviour {
 
     private Transform player;
 
+    public static SpawnPlayer instance;
+
+    private void Awake() {
+        instance = this;
+    }
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (player) {
-            Vector3 pos = transform.position;
-            pos.z = 0;
-            player.transform.position = pos;
+            CheckPoint();
         }
+    }
+
+    public void CheckPoint() {
+        Vector3 pos = transform.position;
+        pos.z = 0;
+        player.transform.position = pos;
     }
 }

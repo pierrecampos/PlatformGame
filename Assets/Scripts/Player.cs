@@ -122,6 +122,10 @@ public class Player : MonoBehaviour {
         if (col.gameObject.layer == 6) {
             isJumping = false;
         }
+
+        if(col.gameObject.layer == 9) {
+            SpawnPlayer.instance.CheckPoint();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col) {
