@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D rig;
+    private PlayerSound playerSound;
+
     public Animator anim;
     public Transform point;
     public float radius;
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour {
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
+        playerSound = GetComponent<PlayerSound>();
     }
 
     void Update() {
@@ -67,6 +70,7 @@ public class Player : MonoBehaviour {
 
     void Jump() {
         if (Input.GetButtonDown("Jump")) {
+            playerSound.PlaySfx(playerSound.jumpSound);
             if (!isJumping) {
                 anim.SetInteger("transition", 2);
                 rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -81,6 +85,7 @@ public class Player : MonoBehaviour {
 
     void Attack() {
         if (Input.GetButtonDown("Fire1") && !isAttacking) {
+            playerSound.PlaySfx(playerSound.hitSound);
             isAttacking = true;
             anim.SetInteger("transition", 3);
 
@@ -123,7 +128,7 @@ public class Player : MonoBehaviour {
             isJumping = false;
         }
 
-        if(col.gameObject.layer == 9) {
+        if (col.gameObject.layer == 9) {
             SpawnPlayer.instance.CheckPoint();
         }
     }
@@ -134,7 +139,8 @@ public class Player : MonoBehaviour {
             OnHit();
         }
 
-        if (col.CompareTag("Coin")) {
+        if (col.CompareTag("Coin")) 
+            playerSound.PlaySfx(playerSound.coinSound);
             col.GetComponent<Animator>().SetTrigger("pickUp");
             Destroy(col.gameObject, 0.417f);
             GameController.instance.GetCoin();
