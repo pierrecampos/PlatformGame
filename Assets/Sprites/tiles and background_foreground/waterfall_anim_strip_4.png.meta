@@ -1,7 +1,79 @@
 fileFormatVersion: 2
 guid: 964158f9bfa550d479c32a4eee90b6a1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5745253112252664404
+    second: waterfall_anim_strip_4_0
+  - first:
+      213: 3950479018132473971
+    second: waterfall_anim_strip_4_1
+  - first:
+      213: -6387735621270283062
+    second: waterfall_anim_strip_4_2
+  - first:
+      213: 2657703126979764175
+    second: waterfall_anim_strip_4_3
+  - first:
+      213: -358076965914038744
+    second: waterfall_anim_strip_4_4
+  - first:
+      213: -1134858978396657754
+    second: waterfall_anim_strip_4_5
+  - first:
+      213: 6851439736496785268
+    second: waterfall_anim_strip_4_6
+  - first:
+      213: -529587075941515111
+    second: waterfall_anim_strip_4_7
+  - first:
+      213: -2672084663266482116
+    second: waterfall_anim_strip_4_8
+  - first:
+      213: 1905645464254967612
+    second: waterfall_anim_strip_4_9
+  - first:
+      213: -6563311565406988600
+    second: waterfall_anim_strip_4_10
+  - first:
+      213: 6032462627926001351
+    second: waterfall_anim_strip_4_11
+  - first:
+      213: -4231471278552244639
+    second: waterfall_anim_strip_4_12
+  - first:
+      213: -1285731562682409187
+    second: waterfall_anim_strip_4_13
+  - first:
+      213: -4921226782829734791
+    second: waterfall_anim_strip_4_14
+  - first:
+      213: 4595416272982835850
+    second: waterfall_anim_strip_4_15
+  - first:
+      213: -8201087964482650629
+    second: waterfall_anim_strip_4_16
+  - first:
+      213: -1318284492474244145
+    second: waterfall_anim_strip_4_17
+  - first:
+      213: 2105476266143872647
+    second: waterfall_anim_strip_4_18
+  - first:
+      213: 4196188022928659520
+    second: waterfall_anim_strip_4_19
+  - first:
+      213: -4396370874074430608
+    second: waterfall_anim_strip_4_20
+  - first:
+      213: 6852068227627824425
+    second: waterfall_anim_strip_4_21
+  - first:
+      213: 7411117296989842227
+    second: waterfall_anim_strip_4_22
+  - first:
+      213: -1818008783104863661
+    second: waterfall_anim_strip_4_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +113,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,7 +173,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: waterfall_anim_strip_4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5f87bebb2c440b0800000000000000
+      internalID: -5745253112252664404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
