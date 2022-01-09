@@ -19,6 +19,17 @@ public class Player : MonoBehaviour {
     private bool isAttacking;
     private bool isDeath;
 
+    private Player instance;
+    private void Awake() {
+        DontDestroyOnLoad(this);
+
+        if (instance) {
+            Destroy(gameObject);
+        } else {
+            instance = this;
+        }
+    }
+
     void Start() {
         rig = GetComponent<Rigidbody2D>();
     }
@@ -123,7 +134,6 @@ public class Player : MonoBehaviour {
             col.GetComponent<Animator>().SetTrigger("pickUp");
             Destroy(col.gameObject, 0.417f);
             GameController.instance.GetCoin();
-
         }
     }
 

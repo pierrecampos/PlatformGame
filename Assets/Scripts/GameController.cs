@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -18,5 +19,9 @@ public class GameController : MonoBehaviour {
     public void GetCoin() {
         score++;
         scoreText.text = "x " + score.ToString();
+    }
+
+    public void NextLevel(string nextLevel) {
+        SceneManager.LoadScene(nextLevel);
     }
 }
