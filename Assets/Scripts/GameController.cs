@@ -16,12 +16,26 @@ public class GameController : MonoBehaviour {
         instance = this;
     }
 
+    private void Start() {
+        ManageCoins();
+    }
+
     public void GetCoin() {
         score++;
         scoreText.text = "x " + score.ToString();
+
+        PlayerPrefs.SetInt("score", score);
     }
 
     public void NextLevel(string nextLevel) {
         SceneManager.LoadScene(nextLevel);
+    }
+
+    private void ManageCoins() {
+        if (SceneManager.GetActiveScene().name == "lvl_1") {
+            PlayerPrefs.DeleteAll();
+        }
+        score = PlayerPrefs.GetInt("score");
+        scoreText.text = "x " + score.ToString();
     }
 }
