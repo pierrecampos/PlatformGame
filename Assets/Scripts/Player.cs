@@ -139,7 +139,7 @@ public class Player : MonoBehaviour {
             OnHit();
         }
 
-        if (col.CompareTag("Coin")) 
+        if (col.CompareTag("Coin")) {
             playerSound.PlaySfx(playerSound.coinSound);
             col.GetComponent<Animator>().SetTrigger("pickUp");
             Destroy(col.gameObject, 0.417f);
