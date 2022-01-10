@@ -13,7 +13,6 @@ public class Player : MonoBehaviour {
     public float radius;
     public LayerMask enemyLayer;
 
-    private Health healthSystem;
     public int health;
     public float speed;
     public float jumpForce;
@@ -21,26 +20,24 @@ public class Player : MonoBehaviour {
     private bool isJumping;
     private bool doubleJump;
     private bool isAttacking;
-    private bool isDeath;
+    public bool isDeath;
 
     private static Player instance;
     private void Awake() {
         if (!instance) {
-            Debug.Log("Ok");
             instance = this;
             DontDestroyOnLoad(this);
         } else if (instance != this) {
             Destroy(instance.gameObject);
             instance = this;
             DontDestroyOnLoad(this);
-            Debug.Log("Ok1");
         }
     }
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
         playerSound = GetComponent<PlayerSound>();
-        //healthSystem = GetComponent<Health>();
+
     }
 
     void Update() {
@@ -111,20 +108,29 @@ public class Player : MonoBehaviour {
 
     }
     public void OnHit() {
-        //healthSystem.health--;
         health--;
         anim.SetTrigger("hit");
 
         if (health <= 0 && !isDeath) {
             anim.SetTrigger("death");
             isDeath = true;
-            GameController.instance.ShowGameOver();
+            Invoke("invokeGameOver", 0.668f);
+
         }
     }
 
     IEnumerator OnAttack() {
         yield return new WaitForSeconds(.33f);
         isAttacking = false;
+    }   
+
+    void invokeGameOver() {
+        GameController.instance.ShowGameOver();
+    }
+
+    public void ResetStats() {
+        health = 3;
+        isDeath = false;        
     }
 
     void OnDrawGizmos() {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPlayer : MonoBehaviour {
 
-    private GameObject player;
+    private Transform player;
 
     public static SpawnPlayer instance;
 
@@ -12,7 +12,7 @@ public class SpawnPlayer : MonoBehaviour {
         instance = this;
     }
     void Start() {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
         if (player) {
             CheckPoint();
@@ -20,9 +20,11 @@ public class SpawnPlayer : MonoBehaviour {
     }
 
     public void CheckPoint() {
-        player = Instantiate(player).gameObject;
         Vector3 pos = transform.position;
         pos.z = 0;
         player.transform.position = pos;
+        if (player.GetComponent<Player>().isDeath) {
+            player.GetComponent<Player>().ResetStats();
+        }
     }
 }

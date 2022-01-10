@@ -8,14 +8,14 @@ public class Health : MonoBehaviour {
     [SerializeField]
     private int healthCount;
 
-    public int health;
+    private int health;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
     public Image[] hearts;
 
-
     void Update() {
+        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().health;
 
         for (int x = 0; x < hearts.Length; x++) {
             hearts[x].sprite = x < health ? fullHeart : emptyHeart;
