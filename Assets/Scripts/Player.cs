@@ -115,7 +115,6 @@ public class Player : MonoBehaviour {
             anim.SetTrigger("death");
             isDeath = true;
             Invoke("invokeGameOver", 0.668f);
-
         }
     }
 
