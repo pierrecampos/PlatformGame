@@ -20,9 +20,13 @@ Little Reaper é um jogo de plataforma no estilo [**Metroidvania**](https://pt.w
 ## Imagens 🗺️
 <div align="center">
   <img src="https://github.com/pierrecampos/PlatformGame/blob/master/GamePlay.gif" width="100%" />
-  <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Menu.png" height="400px"/>
-  <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level1.png" height="400px"/>
-   <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level2.png" height="400px"/>
+  
+  <details>
+    <summary><b>Mais fotos 📂</b></summary>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Menu.png" height="400px"/>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level1.png" height="400px"/>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level2.png" height="400px"/>
+  </details>
  </div>
 
 ## Tecnologias Utilizadas 🤖
