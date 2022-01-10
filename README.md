@@ -20,10 +20,23 @@ Little Reaper é um jogo de plataforma no estilo [**Metroidvania**](https://pt.w
 ## Imagens 🗺️
 <div align="center">
   <img src="https://github.com/pierrecampos/PlatformGame/blob/master/GamePlay.gif" width="100%" />
-  <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Menu.png" height="400px"/>
-  <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level1.png" height="400px"/>
-   <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level2.png" height="400px"/>
+  
+  <details>
+    <summary><b>Mais fotos 📂</b></summary>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Menu.png" height="400px"/>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level1.png" height="400px"/>
+    <img src="https://github.com/pierrecampos/PlatformGame/blob/master/Level2.png" height="400px"/>
+  </details>
  </div>
+
+
+## Como Jogar 🎮
+- Controles
+  - **A**: Move Para Esquerda
+  - **D**: Move Para Direita
+  - **Espaço**: Pula
+  - **Botão Esquerdo do Mouse**: Ataca
+  - **Esc**: Pause o Jogo.
 
 ## Tecnologias Utilizadas 🤖
 - Unity - Engine
@@ -39,7 +52,7 @@ Little Reaper é um jogo de plataforma no estilo [**Metroidvania**](https://pt.w
 - Assets: [Plataforma Crie Seus Jogos](https://www.crieseusjogos.com.br/)
 - Sounds: [Free Sound](https://freesound.org/)
 
-<h4 align="center"><b>Neste projeto precisei tomar 7x ☕ café - </b></h4>
+<h4 align="center"><b>Neste projeto precisei tomar 7x ☕ café 😄</b></h4>
 
 
 
