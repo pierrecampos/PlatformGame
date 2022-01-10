@@ -31,16 +31,16 @@ Little Reaper é um jogo de plataforma no estilo [**Metroidvania**](https://pt.w
 
 
 ## Como Jogar 🎮
-1. Baixe o jogo [Download](https://github.com/pierrecampos/PlatformGame/files/7842276/LittleReaper-V1.0.0.zip)
-2. Descompacte em alguma pasta
-3. Execute **Little Reaper.exe**
+1. Baixe o jogo [Download](https://github.com/pierrecampos/PlatformGame/files/7842276/LittleReaper-V1.0.0.zip);
+2. Descompacte em alguma pasta;
+3. Execute **Little Reaper.exe**.
 
 - Controles
-  - **A**: Move Para Esquerda
-  - **D**: Move Para Direita
-  - **Espaço**: Pula
-  - **Botão Esquerdo do Mouse**: Ataca
-  - **Esc**: Pause o Jogo.
+  - **A**: Move Para Esquerda.
+  - **D**: Move Para Direita.
+  - **Espaço**: Pula.
+  - **Botão Esquerdo do Mouse**: Ataca.
+  - **Esc**: Pause.
 
 ## Tecnologias Utilizadas 🤖
 - Unity - Engine
