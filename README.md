@@ -8,12 +8,12 @@ Little Reaper é um jogo de plataforma no estilo [**Metroidvania**](https://pt.w
 - RayCast;
 - IA para inimigos;
 - Diferentes formas de animação;
-- Puzzles
-- UI
-- Física
-- Colisores
-- Checkpoints
-- Salvamento de dados PlayerPrefs
+- Puzzles;
+- UI;
+- Física;
+- Colisores;
+- Checkpoints;
+- Salvamento de dados PlayerPrefs.
 
 
 
