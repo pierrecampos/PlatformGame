@@ -73,15 +73,16 @@ public class Player : MonoBehaviour {
 
     void Jump() {
         if (Input.GetButtonDown("Jump")) {
-            playerSound.PlaySfx(playerSound.jumpSound);
             if (!isJumping) {
                 anim.SetInteger("transition", 2);
                 rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumping = true;
                 doubleJump = true;
+                playerSound.PlaySfx(playerSound.jumpSound);
             } else if (doubleJump) {
                 rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 doubleJump = false;
+                playerSound.PlaySfx(playerSound.jumpSound);
             }
         }
     }
@@ -121,7 +122,7 @@ public class Player : MonoBehaviour {
     IEnumerator OnAttack() {
         yield return new WaitForSeconds(.33f);
         isAttacking = false;
-    }   
+    }
 
     void invokeGameOver() {
         GameController.instance.ShowGameOver();
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour {
 
     public void ResetStats() {
         health = 3;
-        isDeath = false;        
+        isDeath = false;
     }
 
     void OnDrawGizmos() {
