@@ -1745,13 +1745,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637254765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b8ec4cd01d886e45a3bcb2352590502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 5
-  health: 5
+  healthCount: 2
+  health: 2
   fullHeart: {fileID: 21300000, guid: f6168c4087634d4468a9a3bd31e07e88, type: 3}
   emptyHeart: {fileID: 21300000, guid: 9cc9cef9c1089164eae5e9142eaf0c7d, type: 3}
   hearts:
@@ -8474,11 +8474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.84
+      value: 6.85
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.57
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600344, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8514,7 +8514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600345, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: health
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4845038551471600347, guid: 53d20d219fe1e8949a8f4da8e028fb37, type: 3}
       propertyPath: m_Name
